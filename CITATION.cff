@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-22"
+version: "3"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/zhan-gupta-hillery-detector-sensor-flat-averaging?version=3"
+license: "CC-BY-4.0"

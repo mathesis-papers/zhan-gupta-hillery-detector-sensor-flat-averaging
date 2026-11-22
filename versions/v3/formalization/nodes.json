@@ -1,0 +1,414 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s1",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s1",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "Two labelled pure-state ensembles with identical Gram matrices have\nthe same attainable measurement probabilities, including the same optimal\nminimum-error success for any fixed priors.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s10",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s10",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s10",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "For the original equal-prior model, restricting the measurement to an\narbitrary global projective measurement leaves both optimal values\nunchanged. Unambiguous measurements include an inconclusive outcome.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s2",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s2",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "Let $n\\geq3$, $1\\leq k\\leq n-1$, $k\\ne n-k$, and $0<\\theta<\\pi$.\nFor $0\\leq t\\leq1$ define\n$\\ket{A_t}=\\sum_x\\sqrt{t p^{(k)}_x+(1-t)p^{(n-k)}_x}\\ket x$.\nThe coefficient-square distributions of $D_k$ and $D_{n-k}$ are distinct,\nbut\n\\[\n P(D_k)=P(D_{n-k})=P(A_t)\\quad(0\\leq t\\leq1).\n\\]\nIn particular, $t=1/2$ refutes Conjecture 2.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s3",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "For $n$ equiprobable normalized pure states with Gram matrix\n$G=(1-c)I+cJ\\succeq0$, their optimal success equals\n\\begin{equation}\n F_n(c)=\\frac{\\bigl(\\sqrt{1+(n-1)c}+(n-1)\\sqrt{1-c}\\bigr)^2}{n^2}.\n\\end{equation}\nOn $0\\leq c\\leq1$, this function is nonincreasing.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s4",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s4",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "For coefficient-square distributions $p,q$ and $0\\leq t\\leq1$,\n\\begin{equation}\n P(tp+(1-t)q)\\leq tP(p)+(1-t)P(q).\n\\end{equation}\nThus equal-error inputs have an average with no larger error; strict\nimprovement is not guaranteed.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s5",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "For equal priors there is an optimal coefficient-square distribution\nconstant on each Hamming-weight layer.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s6",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "Put $m=\\lfloor n/2\\rfloor$ and\n\\[\n c_{\\min}=1-\\frac{4m(n-m)}{n(n-1)}\\sin^2\\theta,\n \\qquad c_*=\\max\\{0,c_{\\min}\\}.\n\\]\nThe global minimum error over normalized pure probes is $1-F_n(c_*)$.\nIf $c_{\\min}\\geq0$, a uniform probe on any layer minimizing $c_k$ is\noptimal. This proves Conjecture 1 of~\\cite[Section 5, p.~10:10]{ZGH}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s7",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "Unambiguous failure is convex in coefficient-squares, and the flat\nfamily of Theorem~\\ref{thm:flat} has constant failure for any fixed priors.\nFor equal priors its global optimum is $c_*=\\max\\{0,c_{\\min}\\}$.\nA probe attaining the minimum-error optimum in\nCorollary~\\ref{cor:optimal} also attains this unambiguous optimum.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s8",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "Let $V_a\\ket x=v_a(x)\\ket x$, $|v_a(x)|=1$, be any finite family\nof diagonal unitaries with fixed priors. Minimum error and unambiguous\nfailure are convex in the coefficient-square distribution. Auxiliary\nsystems do not improve either optimum.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s9",
+      "contributor": null,
+      "identity": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s9",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
+      },
+      "lineage": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:s9",
+      "macros": {
+        "\\bra": "\\langle #1\\rvert",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\tr": "\\operatorname{tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+      "scope": "in_scope",
+      "statement": "The existence of a layer-symmetric optimum does not require every optimum\nto be layer-symmetric. For $n=3$, $\\theta=\\pi/2$, and $0<a<1$,\n$p_x=(1+a(2x_1-1))/8$ is a non-layer-symmetric optimum for both criteria.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+      "toolchain": null,
+      "version": 3,
+      "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+    }
+  ]
+}

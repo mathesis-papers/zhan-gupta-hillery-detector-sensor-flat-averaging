@@ -1,0 +1,488 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\tr}{\operatorname{tr}}
+\title{Flat averages refute Zhan--Gupta--Hillery,\
+Section 5, Conjecture 2 (2024, p.~10:11):\
+an extension of Skotiniotis et al.\ (2018)}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{November 5, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For Zhan--Gupta--Hillery, Section 5, Conjecture 2 (2024, p.~10:11;
+arXiv:2306.17401v6, p.~11), we derive a strict-averaging counterexample
+from the complementary-layer Gram formula of Skotiniotis et al.\ (2018).
+Two different coefficient-square distributions and their whole averaging
+segment have the same Gram matrix and, for three sensors at
+$\theta=\pi/4$, the same error $(14-4\sqrt{10})/27$.
+We extend the earlier symmetric-probe calculation by proving weak convexity
+and the existence of a symmetric pure optimum without a symmetry assumption.
+This proves the companion Conjecture 1 and answers the source's final question:
+one probe is optimal for both minimum-error and unambiguous discrimination
+at every detector angle. The reductions also apply to fixed unequal priors
+and diagonal impact patterns, without solving their general optimizers.
+\end{abstract}
+\noindent\small Licensed under Creative Commons Attribution 4.0 International
+(CC BY 4.0).\normalsize
+
+\section{The posed statement and its Gram matrix}
+The Gram formula and symmetric-probe optimization used below already appear
+in Skotiniotis, Hotz, Calsamiglia and Mu\~noz-Tapia
+(2018, Eq.~(8))~\cite{SHCM18}; their expanded article with Llorens
+(2024, Section III.B, Eqs.~(12)--(17))~\cite{SLHCM24}
+explicitly leaves the restriction to pure permutation-invariant probes
+unproved. We use that formula to refute the later strict-averaging
+conjecture and supply a direct argument removing the restriction.
+Their phase parameter is $\varphi=2\theta$ (folded to $[0,\pi]$ if needed);
+their 2024 Gram matrix includes the prior factor $1/n$, whereas ours
+has diagonal one. The complementary-weight symmetry gives the flat family;
+weak convexity supplies the pure-probe reduction. The earlier detector-sensor
+model is described in~\cite{HGZ}.
+
+Zhan, Gupta and Hillery~\cite{ZGH} consider $n\geq3$ qubit sensors,
+one of which is affected with equal prior probability. In the tensor
+eigenbasis of $U$, write
+$U\ket{u_\pm}=e^{\pm i\theta}\ket{u_\pm}$, where $0<\theta<\pi$.
+We use radians. A normalized pure probe $\ket\psi$ produces states
+$\ket{\phi_i}=U_i\ket\psi$, $1\leq i\leq n$, where $U_i$ applies
+$U$ to sensor $i$. Its minimum error is
+\begin{equation}\label{eq:error}
+ P(\psi)=1-\max_{M_i\succeq0,\,\sum_iM_i=I}
+ \frac1n\sum_{i=1}^n\bra{\phi_i}M_i\ket{\phi_i}.
+\end{equation}
+The maximum exists: the POVM set in this finite-dimensional space is compact.
+Conjecture 2 is at Section 5, p.~10:11 (arXiv v6, p.~11;
+source label \texttt{conj:avg}). Its strict conclusion is that the
+average ``has a lower objective function value.'' Thus different coefficient-squares and
+$P(\psi)=P(\psi')$ imply $P(\psi_{\rm avg})<P(\psi')$, where
+\begin{equation}\label{eq:average}
+ \ket{\psi_{\rm avg}}=\sum_{x\in\{0,1\}^n}
+ \sqrt{\frac{|\psi_x|^2+|\psi'_x|^2}{2}}\ket x.
+\end{equation}
+This is a new pure state, not a density-matrix mixture.
+
+Put $p_x=|\psi_x|^2$ and $s_i(x)=2x_i-1$. The final-state Gram matrix is
+\begin{equation}\label{eq:gram}
+ G(p)_{ij}=\langle\phi_i\mid\phi_j\rangle
+ =\sum_x p_x e^{i\theta(s_j(x)-s_i(x))}.
+\end{equation}
+Thus phases of the probe coefficients do not affect discrimination, and
+$G(p)$ is affine in $p$.
+
+\begin{lemma}\label{lem:gram}
+Two labelled pure-state ensembles with identical Gram matrices have
+the same attainable measurement probabilities, including the same optimal
+minimum-error success for any fixed priors.
+\end{lemma}
+\begin{proof}
+Send each labelled vector of the first ensemble to its counterpart in the
+second. For any coefficient vector $z$, the squared norm of its linear
+combination is $z^*Gz$ in both ensembles. The map is therefore well-defined
+and isometric on their spans. Compress a POVM to a span and transport it by
+this isometry. Extend it to the full ambient space by distributing the
+orthogonal-complement projector among the outcomes. This preserves every
+probability on the ensemble. Apply the inverse isometry for the converse.
+\end{proof}
+
+\section{An explicit flat family}
+For $0\leq k\leq n$, let
+\[
+ \ket{D_k}=\binom nk^{-1/2}\sum_{|x|=k}\ket x,
+ \qquad p^{(k)}_x=\binom nk^{-1}{\bf1}_{|x|=k}.
+\]
+These are Dicke states in the eigenbasis of $U$, as in~\cite{ZGH}.
+
+\begin{theorem}\label{thm:flat}
+Let $n\geq3$, $1\leq k\leq n-1$, $k\ne n-k$, and $0<\theta<\pi$.
+For $0\leq t\leq1$ define
+$\ket{A_t}=\sum_x\sqrt{t p^{(k)}_x+(1-t)p^{(n-k)}_x}\ket x$.
+The coefficient-square distributions of $D_k$ and $D_{n-k}$ are distinct,
+but
+\[
+ P(D_k)=P(D_{n-k})=P(A_t)\quad(0\leq t\leq1).
+\]
+In particular, $t=1/2$ refutes Conjecture 2.
+\end{theorem}
+\begin{proof}
+For distinct sensors $i,j$, the number of weight-$k$ words with
+$(x_i,x_j)=(1,0)$ equals the number with $(0,1)$, namely
+$\binom{n-2}{k-1}$. The other
+$\binom{n-2}{k}+\binom{n-2}{k-2}$ words have equal selected bits.
+Equation~\eqref{eq:gram} consequently has diagonal $1$ and common
+off-diagonal entry
+\begin{equation}\label{eq:ck}
+ c_k=1-\frac{4k(n-k)}{n(n-1)}\sin^2\theta.
+\end{equation}
+This is~\cite[Eq.~(8)]{SHCM18}, equivalently~\cite[Eq.~(14)]{SLHCM24}.
+Here $\binom{n-2}{k-1}/\binom nk=k(n-k)/(n(n-1))$;
+out-of-range binomial coefficients are zero.
+Since $c_k=c_{n-k}$, the two Gram matrices agree. Affineness gives
+the same matrix for every $A_t$. Lemma~\ref{lem:gram} gives equality of
+errors. The two endpoint distributions have disjoint nonempty supports,
+and all the states are normalized.
+\end{proof}
+
+For $n=3$, $k=1$, $\theta=\pi/4$, the probes are explicitly
+\begin{align*}
+ \ket{D_1}&=(\ket{100}+\ket{010}+\ket{001})/\sqrt3,\\
+ \ket{D_2}&=(\ket{110}+\ket{101}+\ket{011})/\sqrt3,\\
+ \ket{A_{1/2}}&=(\ket{100}+\ket{010}+\ket{001}
+                  +\ket{110}+\ket{101}+\ket{011})/\sqrt6.
+\end{align*}
+All three final-state Gram matrices equal
+$\frac23 I+\frac13J$, with eigenvalues $5/3,2/3,2/3$.
+The next lemma computes their error exactly.
+
+\begin{lemma}\label{lem:symmetric}
+For $n$ equiprobable normalized pure states with Gram matrix
+$G=(1-c)I+cJ\succeq0$, their optimal success equals
+\begin{equation}\label{eq:f}
+ F_n(c)=\frac{\bigl(\sqrt{1+(n-1)c}+(n-1)\sqrt{1-c}\bigr)^2}{n^2}.
+\end{equation}
+On $0\leq c\leq1$, this function is nonincreasing.
+\end{lemma}
+\begin{proof}
+Let $B=\sqrt G$ and
+$a=B_{ii}=(\sqrt{1+(n-1)c}+(n-1)\sqrt{1-c})/n$,
+independent of $i$. Work with the equivalent ensemble $B e_i$ in
+$\mathbb C^n$, whose Gram matrix is $G$. The projective measurement
+$e_i e_i^*$ attains success $a^2$. For an upper bound take
+$Y=aB/n$. Cauchy--Schwarz in the positive semidefinite form defined by
+$B$ gives
+\[
+ |e_i^*Bv|^2\leq(e_i^*Be_i)(v^*Bv)=a\,v^*Bv.
+\]
+Hence $Y\succeq (Be_i)(Be_i)^*/n$ for every $i$. Any POVM has success
+at most $\sum_i\tr(YM_i)=\tr Y=a^2$. This proves the formula even
+when $G$ is singular. For $0<c<1$, the derivative of the numerator's
+positive square root is
+\[
+ \frac{n-1}{2}\left(\frac1{\sqrt{1+(n-1)c}}
+                         -\frac1{\sqrt{1-c}}\right)\leq0.
+\]
+Continuity includes both endpoints. This is the square-root measurement
+calculation; see~\cite{EF} for its general setting and~\cite[Lemma 2]{ZGH}
+for the equal-overlap formula.
+\end{proof}
+
+Substitution of $n=3$, $c=1/3$ into~\eqref{eq:f} yields
+\begin{equation}\label{eq:exact}
+ P(D_1)=P(D_2)=P(A_t)=1-\frac{13+4\sqrt{10}}{27}
+ =\frac{14-4\sqrt{10}}{27}\qquad(0\leq t\leq1).
+\end{equation}
+This refutation has positive error, rather than depending on a zero-error
+boundary case.
+
+\section{Weak averaging and the companion conjecture}
+Write $P(p)$ for~\eqref{eq:error} with amplitudes $\sqrt{p_x}$.
+
+\begin{theorem}[Weak averaging]\label{thm:convex}
+For coefficient-square distributions $p,q$ and $0\leq t\leq1$,
+\begin{equation}\label{eq:convex}
+ P(tp+(1-t)q)\leq tP(p)+(1-t)P(q).
+\end{equation}
+Thus equal-error inputs have an average with no larger error; strict
+improvement is not guaranteed.
+\end{theorem}
+\begin{proof}
+Let $\phi_i(p)$ and $\phi_i(q)$ be their final states. In the direct sum
+of two copies of the Hilbert space put
+\[
+ \eta_i=\sqrt t\,\phi_i(p)\oplus\sqrt{1-t}\,\phi_i(q).
+\]
+Their Gram matrix is $tG(p)+(1-t)G(q)=G(tp+(1-t)q)$.
+If $M_i$ and $N_i$ are optimal POVMs for the two ensembles, the block
+POVM $M_i\oplus N_i$ has success $t(1-P(p))+(1-t)(1-P(q))$
+on $\eta_i$. Lemma~\ref{lem:gram} transports this measurement to
+the averaged probe, proving~\eqref{eq:convex}. The endpoints are immediate.
+The same proof applies to any fixed priors.
+\end{proof}
+
+\begin{corollary}[Symmetric optimum]\label{cor:sym}
+For equal priors there is an optimal coefficient-square distribution
+constant on each Hamming-weight layer.
+\end{corollary}
+\begin{proof}
+A sensor permutation merely relabels outcomes and changes all states by a
+common unitary, so it preserves $P$. Average $p$ over all $n!$ sensor
+permutations. Repeated use of~\eqref{eq:convex} shows that this average
+has error at most $P(p)$, and the permutation orbits are exactly the
+weight layers. An optimum exists because the probe sphere and POVM set
+are compact and the joint success is continuous. Apply the averaging
+argument to such an optimum. This proves existence, not that every
+optimum has layer symmetry.
+\end{proof}
+
+\begin{corollary}[Conjecture 1]\label{cor:optimal}
+Put $m=\lfloor n/2\rfloor$ and
+\[
+ c_{\min}=1-\frac{4m(n-m)}{n(n-1)}\sin^2\theta,
+ \qquad c_*=\max\{0,c_{\min}\}.
+\]
+The global minimum error over normalized pure probes is $1-F_n(c_*)$.
+If $c_{\min}\geq0$, a uniform probe on any layer minimizing $c_k$ is
+optimal. This proves Conjecture 1 of~\cite[Section 5, p.~10:10]{ZGH}.
+\end{corollary}
+\begin{proof}
+By Corollary~\ref{cor:sym}, it suffices to consider
+$p=\sum_{k=0}^n w_k p^{(k)}$, $w_k\geq0$, $\sum_k w_k=1$.
+Its Gram matrix has common overlap $c=\sum_k w_k c_k$.
+Since $k(n-k)$ is maximized at the central layers, the smallest $c_k$
+is $c_{\min}$, while $c_0=1$.
+If $c_{\min}\geq0$, Lemma~\ref{lem:symmetric} maximizes success at
+$c=c_{\min}$. If $c_{\min}<0$, mix a central layer with layer zero,
+using central-layer weight $1/(1-c_{\min})$. This gives $c=0$ and
+success $1$, the universal upper bound. In the source's notation,
+$c_k=(R_k+\cos(2\theta)L_k)/(R_k+L_k)$.
+Moreover $c_{\min}\geq0$ is exactly
+$\theta\in(0,T]\cup[\pi-T,\pi)$, with
+$T=\tfrac12\arccos(- (r-1)/r)$ and $r=\lceil n/2\rceil$.
+Indeed $\sin^2T=n(n-1)/(4m(n-m))$ for either parity of $n$.
+These are precisely the range and minimizers in Conjecture 1.
+\end{proof}
+
+The symmetric-probe formula and the construction at $c_*=0$ are
+already in~\cite[Section III.B, Eqs.~(16)--(17)]{SLHCM24}, with the
+Gram formula and construction present in the 2018 version~\cite{SHCM18}.
+Corollary~\ref{cor:sym} supplies the reduction to that class and resolves
+the qubit-unitary pure-symmetry question left in~\cite[Section V]{SLHCM24}.
+
+For odd $n$, the two central layers are distinct. Whenever
+$c_{\min}\geq0$, every distribution on the segment between them is
+globally optimal. In particular the three probes in~\eqref{eq:exact}
+are optimal even though their coefficient-squares differ.
+
+\section{Unambiguous discrimination and further consequences}
+For unambiguous discrimination a POVM has outcomes $1,\ldots,n,?$;
+it never reports $i$ on state $j\ne i$, and its failure probability
+is the probability of $?$.
+
+\begin{corollary}\label{cor:ud}
+Unambiguous failure is convex in coefficient-squares, and the flat
+family of Theorem~\ref{thm:flat} has constant failure for any fixed priors.
+For equal priors its global optimum is $c_*=\max\{0,c_{\min}\}$.
+A probe attaining the minimum-error optimum in
+Corollary~\ref{cor:optimal} also attains this unambiguous optimum.
+\end{corollary}
+\begin{proof}
+Lemma~\ref{lem:gram} preserves every outcome probability, including
+zero wrong-answer probabilities. The block measurement in
+Theorem~\ref{thm:convex} remains unambiguous when its constituents do;
+its inconclusive effect is the direct sum of theirs. This proves
+convexity and permits the same permutation averaging.
+
+For a symmetric ensemble with Gram matrix $G=(1-c)I+cJ$, conclusive
+probabilities $q_i$ are feasible exactly when
+$G-\operatorname{diag}(q_i)\succeq0$ and $q_i\geq0$.
+Necessity follows by applying the inconclusive effect to the ensemble:
+its Gram contribution is the residual matrix. Conversely, choose vectors
+with that residual Gram matrix and map the input vectors to
+$\sqrt{q_i}e_i\oplus\beta_i$. Their Gram matrix is $G$, so the
+isometry in Lemma~\ref{lem:gram} implements the desired measurement.
+Average a feasible diagonal over all outcome permutations. Its mean
+$\bar q I$ is feasible, so $\bar q\leq\lambda_{\min}(G)$, and equality
+is feasible. Thus the symmetric failure is
+\[
+ 1-\lambda_{\min}(G)=\max\{c,-(n-1)c\}.
+\]
+For $c\geq0$ this recovers~\cite[Lemma 3]{ZGH}. Every symmetric probe
+has $c\in[c_{\min},1]$. If $c_{\min}\geq0$, minimize at $c_{\min}$;
+otherwise use the $c=0$ mixture from Corollary~\ref{cor:optimal}.
+These are exactly the same probes as for minimum error.
+\end{proof}
+
+This proves the unambiguous version of Conjecture 1 proposed in
+Section 8.1, item (2), and answers the common-optimal-probe question
+in~\cite[Section 9, final sentence, p.~10:23]{ZGH}.
+Item (3)'s strict-averaging assertion is refuted even at positive failure:
+for $n=3$, $\theta=\pi/4$, every member of the flat family has
+failure $1/3$.
+
+\begin{corollary}\label{cor:patterns}
+Let $V_a\ket x=v_a(x)\ket x$, $|v_a(x)|=1$, be any finite family
+of diagonal unitaries with fixed priors. Minimum error and unambiguous
+failure are convex in the coefficient-square distribution. Auxiliary
+systems do not improve either optimum.
+\end{corollary}
+\begin{proof}
+The Gram matrix has entries
+$G(p)_{ab}=\sum_xp_x\overline{v_a(x)}v_b(x)$, affine in $p$.
+The direct-sum argument proves both convexities. For an auxiliary-system
+pure probe write $\sum_x\ket x\ket{a_x}$ and put
+$p_x=\langle a_x\mid a_x\rangle$. Its output Gram matrix equals
+$G(p)$, so the probe $\sum_x\sqrt{p_x}\ket x$ has identical attainable
+probabilities. A mixed probe may be purified; discarding the additional
+system cannot improve its measurement optimum, giving the same bound.
+\end{proof}
+
+The ancillary-system observation for one affected unitary is already
+proved in~\cite[Appendix A]{SLHCM24}; the argument above applies
+to every diagonal impact pattern and either discrimination objective.
+It covers the algebraic reduction for multiple affected sensors or
+commuting impact operators mentioned in~\cite[Section 9]{ZGH}, but
+does not determine their general optimum. Later multi-event results
+are given by Ali--Hillery~\cite{AH}, and perfect trajectory discrimination
+by Chin--Chuang~\cite[Theorem 8(b)]{CC}; those are different scopes
+from general minimum-error optimization. For unequal priors, Section 8.2's
+orthogonality region remains exact when all priors are positive:
+zero error is equivalent to orthogonal pure outputs, independently of
+the positive prior weights. We do not impose equal priors on the flat-family
+or weak-averaging statements.
+
+\begin{corollary}\label{cor:necessity}
+The existence of a layer-symmetric optimum does not require every optimum
+to be layer-symmetric. For $n=3$, $\theta=\pi/2$, and $0<a<1$,
+$p_x=(1+a(2x_1-1))/8$ is a non-layer-symmetric optimum for both criteria.
+\end{corollary}
+\begin{proof}
+This distribution is positive and sums to one. For $i\ne j$ the Gram
+entry is $\mathbb E_p[s_i s_j]=0$, because uniform signs have vanishing
+nonconstant products, including $\mathbb E[s_1s_i s_j]$.
+Hence $G=I$ and both errors are zero. Words of the same weight with
+different first bits have different probabilities.
+\end{proof}
+This universal necessity statement is not posed as a separate conjecture;
+Corollary~\ref{cor:necessity} distinguishes it from the existence
+question before Conjecture 2.
+
+\begin{corollary}\label{cor:projective}
+For the original equal-prior model, restricting the measurement to an
+arbitrary global projective measurement leaves both optimal values
+unchanged. Unambiguous measurements include an inconclusive outcome.
+\end{corollary}
+\begin{proof}
+Use the common optimal probe with $G=(1-c_*)I+c_*J$.
+For minimum error, Lemma~\ref{lem:symmetric} attains $F_n(c_*)$
+by the coordinate projectors on the ensemble $\sqrt G e_i$ in
+$\mathbb C^n$. The isometry between its span and the physical output
+span extends to an isometric embedding of $\mathbb C^n$ in the
+$2^n$-dimensional sensor space. Transport the coordinate projectors
+and add the remaining orthogonal-complement projector to one outcome.
+The resulting effects are mutually orthogonal projectors with the same
+success probability.
+
+For unambiguous discrimination use vectors
+$\sqrt{1-c_*}e_i+\sqrt{c_*}e_?$ in $\mathbb C^{n+1}$, which
+also have Gram matrix $G$. Since $2^n\geq n+1$ for $n\geq3$,
+the same extension embeds the coordinate projectors in the physical
+space. Assign the remaining complement to the inconclusive outcome.
+This projective measurement never gives a wrong conclusive answer
+and has failure $c_*$.
+\end{proof}
+Thus the global-projective part of~\cite[Section 9]{ZGH}'s
+measurement-restriction question has the same optimum. The
+minimum-error square-root measurement for symmetric probes is already
+in~\cite{EF,SLHCM24}. Local-measurement restrictions and noisy-channel
+optimization (Section 8.3) remain outside the present conclusions.
+
+\section{Coverage and mathematical evidence}
+
+\begin{center}\small
+\begin{tabular}{@{}p{.40\linewidth}p{.53\linewidth}@{}}
+\toprule
+Source item or mathematical statement&Coverage\\\midrule
+Complementary-layer Gram formula&Reproved; prior proof Skotiniotis
+et al.\ (2018, Eq.~(8); 2024, Eq.~(14)).\\
+Section 5, Conjecture 2, p.~10:11&Refuted-and-corrected:
+Theorems~\ref{thm:flat} and~\ref{thm:convex}.\\
+Section 5, symmetry-of-coefficients question before Conjecture 2&Answered: yes
+(existence):
+Corollary~\ref{cor:sym}.\\
+Skotiniotis et al.\ (2024), Section V, qubit-unitary pure-symmetry question&Answered:
+yes, Corollary~\ref{cor:sym}.\\
+Section 5, Conjecture 1, p.~10:10&Proved without symmetry assumption:
+Corollary~\ref{cor:optimal}; symmetric calculation reproved, prior
+Skotiniotis et al.\ (2018; 2024).\\
+Section 4, Theorem 2 and Corollary 1&Reproved; prior proof
+Zhan--Gupta--Hillery (2023 preprint; 2024), with constructive
+sufficiency in Skotiniotis et al.\ (2018); later independent
+Chin--Chuang (2024 preprint; 2025).\\
+Section 8.1, items (2)--(3)&Conjecture 1 variant proved;
+strict averaging refuted-and-corrected: Corollary~\ref{cor:ud}.\\
+Section 8.2&Complementary-layer equality and weak averaging hold for
+fixed priors; general unequal-prior optimum not covered.\\
+Section 8.3&Noisy-channel optimization not covered.\\
+Section 9, final question, p.~10:23&Answered: yes, common optimal probe,
+Corollary~\ref{cor:ud}.\\
+Section 9, multiple impacts&General optimum not covered;
+diagonal-pattern reduction proved, Corollary~\ref{cor:patterns}.\\
+Section 9, restricted measurements&Answered for global projective measurements:
+both optima are preserved, Corollary~\ref{cor:projective}; local restrictions not covered.\\
+Universal symmetry of every optimum&Not posed as a separate conjecture;
+fails for Corollary~\ref{cor:necessity}'s example.\\\bottomrule
+\end{tabular}
+\end{center}
+The arguments above are written proofs. The accompanying \texttt{verify.py}
+checks exact layer counts for $3\leq n\leq8$, the three-sensor Gram matrices,
+and a matching measurement/upper-bound certificate over
+$\mathbb Q(\sqrt{10})$ for~\eqref{eq:exact}.
+The additional rational checks cover the nonsymmetric three-sensor
+family at thirteen choices of $a$, equal-Gram ancillary probes and the
+residual-Gram characterization for unambiguous discrimination.
+In the strict-averaging Lean file linked below, the declaration
+\texttt{result} proves the negation
+of the universal strict claim using $n=3$, $\theta=\pi/4$ and the two
+optimal layers: its comparison is that the average cannot have lower
+error than an optimal endpoint. Equality along the whole segment and
+the radical value in~\eqref{eq:exact} are written proofs here, not
+conclusions of that declaration. In the companion Dicke-optimality file,
+\texttt{result} compares each proposed
+minimizing-layer probe against every normalized pure competitor and every
+global equal-prior POVM in the angular range of Conjecture 1.
+The corresponding fixed-revision sources are
+\href{https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean}{the strict-averaging declaration}
+and
+\href{https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.lean}{the Dicke-optimality declaration}.
+The general flat-family identity, weak-averaging
+proof, unambiguous and diagonal-pattern extensions are established above
+by written proofs; the rational and quadratic-field checks have the
+finite scope specified here.
+
+\begin{thebibliography}{9}
+\bibitem{ZGH} C.~Zhan, H.~Gupta and M.~Hillery,
+\emph{Optimizing Initial State of Detector Sensors in Quantum Sensor Networks},
+ACM Transactions on Quantum Computing \textbf{5}(2), Article 10 (2024), 1--25.
+\href{https://doi.org/10.1145/3655028}{doi:10.1145/3655028}.
+\href{https://arxiv.org/abs/2306.17401v6}{arXiv:2306.17401v6}.
+\bibitem{EF} Y.~C.~Eldar and G.~D.~Forney, Jr.,
+\emph{On quantum detection and the square-root measurement},
+IEEE Transactions on Information Theory \textbf{47}(3) (2001), 858--872.
+\href{https://doi.org/10.1109/18.915636}{doi:10.1109/18.915636}.
+\href{https://arxiv.org/abs/quant-ph/0005132v2}{arXiv:quant-ph/0005132v2}.
+\bibitem{HGZ} M.~Hillery, H.~Gupta and C.~Zhan,
+\emph{Discrete outcome quantum sensor networks},
+Physical Review A \textbf{107} (2023), 012435.
+\href{https://doi.org/10.1103/PhysRevA.107.012435}{doi:10.1103/PhysRevA.107.012435}.
+\href{https://arxiv.org/abs/2210.17254}{arXiv:2210.17254}.
+\bibitem{SHCM18} M.~Skotiniotis, R.~Hotz, J.~Calsamiglia and
+R.~Mu\~noz-Tapia, \emph{Identification of malfunctioning quantum devices},
+arXiv:1808.02729v1 (August 8, 2018), Eqs.~(8)--(11).
+\href{https://arxiv.org/abs/1808.02729v1}{2018 version}.
+\bibitem{SLHCM24} M.~Skotiniotis, S.~Llorens, R.~Hotz, J.~Calsamiglia
+and R.~Mu\~noz-Tapia, \emph{Identification of malfunctioning quantum devices},
+Physical Review Research \textbf{6} (2024), 033329.
+\href{https://doi.org/10.1103/PhysRevResearch.6.033329}{doi:10.1103/PhysRevResearch.6.033329}.
+\href{https://arxiv.org/abs/1808.02729v3}{arXiv:1808.02729v3},
+Section III.B and Appendices A--B.
+\bibitem{AH} N.~Ali and M.~Hillery, \emph{Discrete-outcome sensor
+networks. II. Multiple detection events and grouping detectors},
+Physical Review A \textbf{110} (2024), 012619.
+\href{https://doi.org/10.1103/PhysRevA.110.012619}{doi:10.1103/PhysRevA.110.012619}.
+\href{https://arxiv.org/abs/2407.20435}{arXiv:2407.20435}.
+\bibitem{CC} Z.~E.~Chin and I.~L.~Chuang,
+\emph{Quantum trajectory sensing problem and its solution},
+Physical Review A \textbf{111} (2025), 052447.
+\href{https://doi.org/10.1103/PhysRevA.111.052447}{doi:10.1103/PhysRevA.111.052447}.
+\href{https://arxiv.org/abs/2410.00893v1}{arXiv:2410.00893v1}
+(October 1, 2024), Theorem 8(b).
+\end{thebibliography}
+\end{document}
