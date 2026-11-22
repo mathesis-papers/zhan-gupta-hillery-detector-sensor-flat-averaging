@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24405809",
     "current_version": 3,
-    "doi": null,
+    "doi": "10.5281/zenodo.24405810",
     "lean_source": {
       "revision": "15070fa5f71c4237050acc7ebe058958cbc04e6e",
       "url": "https://github.com/the-omega-institute/trureturing/blob/15070fa5f71c4237050acc7ebe058958cbc04e6e/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean"
