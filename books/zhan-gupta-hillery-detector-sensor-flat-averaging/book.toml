@@ -1,0 +1,17 @@
+[book]
+version = "3"
+authors = ["Haobo Ma", "Wenlin Zhang"]
+license = "CC-BY-4.0"
+editions = ["zh", "en"]
+date = "2026-11-22"
+[book.title]
+zh = "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)"
+en = "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)"
+[outputs]
+html = true
+pdf = ["academic"]
+epub = true
+[mathesis]
+work = "zhan-gupta-hillery-detector-sensor-flat-averaging"
+version = 3
+source_title = "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)"

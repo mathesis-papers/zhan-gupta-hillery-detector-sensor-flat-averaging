@@ -1,0 +1,24 @@
+{
+  "voice": "af_heart",
+  "speed": 0.94,
+  "say": {},
+  "music": {"bpm": 80, "progression": "a-minor"},
+  "scenes": [
+    {"id": "open", "name": "ONE SENSOR FIRES", "lead": 1.0, "tail": 0.8, "lines": [
+      ["One of three quantum sensors fires. The job is to tell which one fired, from the state it leaves behind.", "三个量子传感器中有一个触发。我们要根据它留下的量子态，判断触发的是哪一个。"],
+      ["Suppose two different preparations tie. Must averaging their weights make the best guess more accurate?", "假如两种不同的准备方法打成平手，把它们的权重平均，最好的猜测就一定更准吗？"]
+    ]},
+    {"id": "count", "name": "COUNT THE BITS", "lead": 0.6, "tail": 0.8, "lines": [
+      ["Give equal weight to the three words with one bit set. Or give equal weight to their complements, the three words with two bits set.", "可以给只有一位为一的三个串同样的权重，也可以给它们的三个互补串同样的权重。后者各有两位为一。"],
+      ["Look at the first two positions. In each list there is one match and two mismatches. The two mismatches come in opposite orders.", "只看前两位。每张清单里，有一个串的前两位相同，另外两个不同，而且这两种不同的排列恰好相反。"],
+      ["The opposite phase contributions pair up. The same count holds for each pair of positions, so the lists give the same table of overlaps.", "相反的相位贡献成对出现。换任何一对位置，计数都一样，所以两张清单给出同一张重叠表。"]
+    ]},
+    {"id": "flat", "name": "A CONSTANT TABLE", "lead": 0.6, "tail": 0.8, "lines": [
+      ["Now mix the weights in any proportion. The overlap table is the same weighted average of two identical tables, so it never changes.", "现在按任何比例混合权重。重叠表就是两张相同的表按同样的比例取平均，因此完全不变。"],
+      ["Identical tables let us transfer every measurement statistic. At the angle pi over four, the best error stays positive and exactly the same all the way across.", "相同的表让我们保持所有测量统计。当角度为 π 除以 4 时，从一个端点到另一个端点，最小错误率始终为正，且完全相同。"]
+    ]},
+    {"id": "close", "name": "WHAT AVERAGING GUARANTEES", "lead": 0.6, "tail": 2.0, "lines": [
+      ["Averaging still cannot exceed the weighted average of the two optimal errors. But this example explains why a strict improvement cannot be promised.", "平均后的错误率仍不会超过两个最小错误率的加权平均。但这个例子解释了，为什么不能保证严格改进。"]
+    ]}
+  ]
+}

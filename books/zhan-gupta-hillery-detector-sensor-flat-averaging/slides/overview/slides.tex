@@ -1,0 +1,119 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Flat averages in quantum sensor networks}
+\subtitle{A source-based explanation of the detector-sensor counterexample}
+\author{Paper by Haobo Ma and Wenlin Zhang}
+\date{Mathesis version 3}
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  \note{The task is to guess which sensor fired, not whether any sensor fired. We discuss a single noiseless impact on one of $n\ge3$ qubits. The result concerns optimum measurement statistics, rather than the performance of one prescribed measurement.}
+\end{frame}
+
+\section{One firing, two preparations}
+\begin{frame}{The strict conjecture}
+  One sensor fires, each label having prior $1/n$. The two basis phases are $e^{\pm i\theta}$ with $\theta\in(0,\pi)$.
+  \[
+    \phi_i(x)=e^{i\theta(2x_i-1)}\psi_x,\qquad p_x=|\psi_x|^2.
+  \]
+  Let $P(p)$ be minimum error over global POVMs. The posed claim was
+  \[
+    p\ne q,\quad P(p)=P(q)\ \Longrightarrow\ P(q)>P\big((p+q)/2\big).
+  \]
+  \note{The new pure probe has amplitudes $\sqrt{(p_x+q_x)/2}$. Do not average amplitudes or mix density matrices. The strict claim is Conjecture 2 in Section 5 of Zhan, Gupta and Hillery (2024), page 10:11.}
+\end{frame}
+
+\begin{frame}{The complete overlap table}
+  Set $s_i(x)=2x_i-1$. The Gram matrix is affine in the weights:
+  \[
+    G(p)_{ij}=\sum_x p_x e^{i\theta(s_j(x)-s_i(x))}.
+  \]
+  \begin{bookresult}{gram-transfer}
+    Identical labelled Gram matrices give identical attainable measurement statistics.
+  \end{bookresult}
+  \note{The squared norm of a combination with coefficients $z$ is $z^*Gz$. This yields a span isometry even for dependent vectors. Compress effects to a span, transport them, and complete the measurement arbitrarily off the output span. This works for any fixed priors and for any finite outcome labels.}
+\end{frame}
+
+\begin{frame}{Two lists, one error}
+  \begin{tabular}{lc}
+    \textbf{Weight 1} & $100,010,001$ \\
+    \textbf{Weight 2} & $011,101,110$
+  \end{tabular}
+  \begin{bookresult}{flat-family}
+    For distinct complementary layers $k,n-k$, the minimum error is constant on the entire coefficient-square segment $0\leq t\leq1$.
+  \end{bookresult}
+  \[
+    c_k=1-\frac{4k(n-k)}{n(n-1)}\sin^2\theta=c_{n-k}.
+  \]
+  \note{For each pair of positions, each opposite ordering has frequency $k(n-k)/[n(n-1)]$. Equal bits contribute one. Opposite phase factors pair as conjugates. This gives the earlier Skotiniotis et al. overlap formula, which is invariant under $k\mapsto n-k$. Affineness keeps the entire table constant even though the endpoint supports are disjoint.}
+\end{frame}
+
+\begin{frame}{The tie occurs at positive error}
+  \begin{bookresult}{equal-overlap}
+    For $G=(1-c)I+cJ\succeq0$ and equal priors, the optimum success is
+    \[
+     F_n(c)=\frac{(\sqrt{1+(n-1)c}+(n-1)\sqrt{1-c})^2}{n^2}.
+    \]
+  \end{bookresult}
+  At $n=3$, $k=1$, $\theta=\pi/4$: $c=1/3$, and $P=(14-4\sqrt{10})/27>0$ for all $t$.
+  \note{The uniform direction and its complement give the two eigenvalues. The coordinate measurement on $\sqrt G e_i$ attains $a^2$, where $a$ is the common diagonal of $\sqrt G$. Cauchy--Schwarz bounds every POVM by the same $a^2$, including singular Gram matrices. The formula is nonincreasing for $0\leq c\leq1$.}
+\end{frame}
+
+\section{Weak averaging and optimal probes}
+\begin{frame}{The weak inequality survives}
+  \begin{bookresult}{weak-averaging}
+    $P(tp+(1-t)q)\leq tP(p)+(1-t)P(q)$ for $0\leq t\leq1$.
+  \end{bookresult}
+  Use $\eta_i=\sqrt t\,\phi_i(p)\oplus\sqrt{1-t}\,\phi_i(q)$.
+  \begin{bookresult}{symmetric-optimum}
+    With equal priors, there is an optimum constant on each weight layer.
+  \end{bookresult}
+  \note{Optimal measurements in the two slots give weighted success; equal-Gram transport implements the same statistics on the averaged pure probe. This works for fixed unequal priors too. For equal priors, the objective is invariant under sensor permutations. Average an optimal probe's weights over all permutations. Its weights are then constant on each orbit, but the objective cannot worsen.}
+\end{frame}
+
+\begin{frame}{The full angular range}
+  \begin{bookresult}{global-value}
+    The equal-prior global minimum error is $1-F_n(c_*)$, where $c_*=\max\{0,c_{\min}\}$ and $c_{\min}=c_{\lfloor n/2\rfloor}$.
+  \end{bookresult}
+  \begin{itemize}
+   \item $c_{\min}\geq0$: a minimizing layer attains it.
+   \item $0>c_{\min}$: mix a minimizing layer with layer zero to get $c=0$ and perfect discrimination.
+  \end{itemize}
+  \note{The remaining choices have overlap in $[c_{\min},1]$. The first branch is the original Conjecture 1 domain, including its boundary. In the second branch the weight on the minimizing layer is $1/(1-c_{\min})$. With odd $n$, the two central layers are distinct and their entire segment is optimal when $c_{\min}\geq0$.}
+\end{frame}
+
+\section{Extensions and scope}
+\begin{frame}{A right to say ``I don't know''}
+  \begin{bookresult}{unambiguous-optimum}
+    No wrong conclusive guesses. With equal priors, optimal inconclusive probability is $c_*$, attained by the same probe as minimum error.
+  \end{bookresult}
+  \[
+    q_i\geq0,\quad G-\operatorname{diag}(q_i)\succeq0
+    \quad\Longrightarrow\quad\text{feasible correct probabilities}.
+  \]
+  \note{The condition is also necessary: the residual is the Gram contribution of the inconclusive effect. In the symmetric problem, average the diagonal to $\bar q I$ and maximize $\bar q\leq\lambda_{\min}(G)$. The resulting failure at common overlap $c$ is $\max\{c,-(n-1)c\}$. Convexity and flatness still hold with fixed unequal priors, but their general optimum is not computed.}
+\end{frame}
+
+\begin{frame}{What the method does and does not cover}
+  \begin{itemize}
+   \item Common-basis diagonal unitary families: both convexities, and no auxiliary-system advantage.
+   \item Existence is not necessity: a biased first bit can give $G=I$ at $n=3$, $\theta=\pi/2$.
+   \item Global projectors retain both equal-prior optima, with an inconclusive projector when needed.
+  \end{itemize}
+  No general unequal-prior, local-measurement, noisy-channel, or multi-impact optimum is asserted.
+  \note{Only the squared norms of the auxiliary components enter the Gram matrix for diagonal phases. The nonsymmetric example has weights $(1+a(2x_1-1))/8$ for $a\in(0,1)$. The projective proof embeds model output vectors of dimension at most $n+1$ in the sensor space and completes the projectors there.}
+\end{frame}
+
+\begin{frame}{Sources and evidence}
+  \begin{itemize}
+   \item Ma and Zhang, Mathesis v3: \href{https://doi.org/10.5281/zenodo.24405810}{10.5281/zenodo.24405810}.
+   \item Zhan, Gupta and Hillery (2024), Sec. 5; Skotiniotis et al. (2018), Eq. (8), and the expanded 2024 article, Eq. (14).
+   \item The Lean counterexample rules out strict midpoint improvement; it does not prove the full equality segment or its radical error value. The companion Lean result is restricted to the Conjecture 1 angular range.
+  \end{itemize}
+  \note{The book's written proofs track the version-three manuscript. Its finite arithmetic checks are illustrations and certificates of the stated finite cases, not proofs of the universal statements. Point contributors to the request attached to the exact statement they intend to formalize.}
+\end{frame}
+
+\appendix
+\FormalVerification
+\end{document}

@@ -33,3 +33,45 @@ Haobo Ma, Wenlin Zhang (2026). Flat averages refute Zhan–Gupta–Hillery, Sect
 ## Contributions
 
 Original authors are listed above. Formalization contributors and attribution are retained in `formalization/nodes.json`; repository pull requests do not confer verification or credit. Submit formalization attempts through the Mathesis attempt path described in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+<!-- Mathesis generated repository guide; refresh with paper.py front. -->
+
+## Reading and materials
+
+[Paper site](https://papers.trureturing.org/zhan-gupta-hillery-detector-sensor-flat-averaging/) · [Frozen PDF](paper.pdf) · [Citation](CITATION.cff)
+
+[中文阅读](https://papers.trureturing.org/zhan-gupta-hillery-detector-sensor-flat-averaging/zhan-gupta-hillery-detector-sensor-flat-averaging/zh/) · [Read in English](https://papers.trureturing.org/zhan-gupta-hillery-detector-sensor-flat-averaging/zhan-gupta-hillery-detector-sensor-flat-averaging/en/)
+
+[Slides](https://papers.trureturing.org/zhan-gupta-hillery-detector-sensor-flat-averaging/zhan-gupta-hillery-detector-sensor-flat-averaging/slides/) ([sources](books/zhan-gupta-hillery-detector-sensor-flat-averaging/slides/)) · [Videos](https://papers.trureturing.org/zhan-gupta-hillery-detector-sensor-flat-averaging/zhan-gupta-hillery-detector-sensor-flat-averaging/films/) ([sources](books/zhan-gupta-hillery-detector-sensor-flat-averaging/films/))
+
+These are publication routes; available built materials are inventoried in [mathesis-materials.json](https://papers.trureturing.org/zhan-gupta-hillery-detector-sensor-flat-averaging/mathesis-materials.json).
+
+## Book and formalization
+
+Catalog formalization status above is separate from the statement comparisons below. A nearby declaration does not verify the complete written result.
+
+| Book result | Comparison with formal base | Compared declaration |
+|---|---|---|
+| `gram-transfer` | variant | `D5/S3/Quantum/Algebra/GramUnitaryExtension.exists_unitary_mul_eq_of_conjTranspose_mul_eq` |
+| `flat-family` | variant | `D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.result` |
+| `equal-overlap` | variant | `D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.global_success_upper_bound` |
+| `weak-averaging` | variant | `D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.result` |
+| `symmetric-optimum` | special case | `D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.result` |
+| `global-value` | special case | `D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.result` |
+| `unambiguous-optimum` | variant | `D5/S3/Quantum/PureState/NoRepetitionSequenceUnambiguousDiscrimination.result` |
+| `diagonal-patterns` | variant | `D5/S3/Quantum/Algebra/GramUnitaryExtension.exists_unitary_mul_eq_of_conjTranspose_mul_eq` |
+| `nonsymmetric-optimum` | none | — |
+| `global-projective` | none | — |
+
+Book stage: **complete**; 0 pending claims. [Statement comparisons](.mathesis/review.json).
+
+## Repository map
+
+| Zone | Location |
+|---|---|
+| Paper record | `paper.json`, `CITATION.cff`, `paper.pdf`, `manuscript/`, `formalization/nodes.json`, `LICENSES/`, `.mathesis/` |
+| Content | `books/zhan-gupta-hillery-detector-sensor-flat-averaging/`: Chinese/English text, figures, visualizations, videos, slides, assets |
+| Machinery | Upstream and layer managed paths; update with `tbook template update` |
+| Repository front | This README, changelog, contribution guide, licence, project/site/pin configuration, `template.d/` |
+
+See [the enforced layout](docs/layer-mathesis/LAYOUT.md). Preparation run records and built outputs stay outside the committed tree.

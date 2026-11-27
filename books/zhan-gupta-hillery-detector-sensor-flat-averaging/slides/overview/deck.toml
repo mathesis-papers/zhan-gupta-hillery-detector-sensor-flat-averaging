@@ -1,0 +1,9 @@
+kind = "academic"
+editions = ["en"]
+aspect = "4:3"
+structure_colour = "#0e2c8e"
+short_author = "Ma and Zhang (paper)"
+short_title = "Flat averages"
+
+[title]
+en = "Flat averages in quantum sensor networks"

@@ -1,0 +1,27 @@
+{
+  "duration": "1:15",
+  "id": "001-flat-averages",
+  "lean": [],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "zhan-gupta-hillery-detector-sensor-flat-averaging_001_cover.jpg",
+    "narrated_720p": "zhan-gupta-hillery-detector-sensor-flat-averaging_001_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-23",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://github.com/the-omega-institute/trureturing",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "Two complementary lists give the same overlap table for three sensor outputs. Moving between the lists changes the probe weights, but the best error stays positive and constant.",
+  "summary_zh": "两张互补清单给三个传感器输出同一张重叠表。混合的比例改变了探针权重，却没有改变正的最小错误率。",
+  "title": "Why the average does not improve",
+  "title_zh": "混合为何没有更好"
+}

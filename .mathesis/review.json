@@ -1,0 +1,80 @@
+{
+  "results": {
+    "gram-transfer": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Algebra/GramUnitaryExtension.exists_unitary_mul_eq_of_conjTranspose_mul_eq",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The frozen matrix theorem gives only a unitary on the same codomain. The requested statement directly compares all POVM statistics, in both directions, also for ensembles in different ambient spaces, and gives equal optima for fixed priors.",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/D5/S3/Quantum/Algebra/GramUnitaryExtension.lean",
+      "frozen_declaration_evidence": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/Golden/Frozen/state/D5/S3/Quantum/Algebra/GramUnitaryExtension.lean.json"
+    },
+    "flat-family": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The frozen result negates the universal strict midpoint conjecture at n=3, theta=pi/4, using only non-improvement of the midpoint of two optimum layers. This request is only for the full equality along the segment for every allowed n, k, theta and t, not another refutation of Conjecture 2.",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean",
+      "frozen_declaration_evidence": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/Golden/Frozen/state/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean.json"
+    },
+    "equal-overlap": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.global_success_upper_bound",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The frozen sensor bound applies to a single-firing model in the Conjecture 1 angular domain. It does not state the optimal value and attainment for every positive semidefinite constant-overlap Gram matrix, including negative overlap and singular endpoints, or monotonicity on [0,1].",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.lean",
+      "frozen_declaration_evidence": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/Golden/Frozen/state/D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.lean.json"
+    },
+    "weak-averaging": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The frozen negation shows that universal strict improvement fails. It does not prove the upper bound for all pairs p,q and all t, including unequal endpoint error. The written direct-sum proof also works with any fixed priors.",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean",
+      "frozen_declaration_evidence": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/Golden/Frozen/state/D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.lean.json"
+    },
+    "symmetric-optimum": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The frozen declaration supplies a uniform minimizing layer in the edge-angle region only. This result asks for a layer-constant optimum throughout the full angular domain; no assertion that every optimum is symmetric.",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.lean",
+      "frozen_declaration_evidence": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/Golden/Frozen/state/D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.lean.json"
+    },
+    "global-value": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The frozen result proves the minimizing-layer comparison against all normalized pure probes and global POVMs within the original Conjecture 1 angular domain c_min>=0. This request retains that result and targets the all-angle exact error, including c_min<0 and the perfect-discrimination construction; do not redo the frozen comparison.",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.lean",
+      "frozen_declaration_evidence": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/Golden/Frozen/state/D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.lean.json"
+    },
+    "unambiguous-optimum": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/PureState/NoRepetitionSequenceUnambiguousDiscrimination.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The frozen result treats no-repetition strings (at least two labels per product state) built from an equiangular alphabet with positive overlap, not detector-sensor probe optimization, arbitrary fixed-prior convexity or a shared probe for the two criteria.",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/D5/S3/Quantum/PureState/NoRepetitionSequenceUnambiguousDiscrimination.lean",
+      "frozen_declaration_evidence": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/Golden/Frozen/state/D5/S3/Quantum/PureState/NoRepetitionSequenceUnambiguousDiscrimination.lean.json"
+    },
+    "diagonal-patterns": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Algebra/GramUnitaryExtension.exists_unitary_mul_eq_of_conjTranspose_mul_eq",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The equal-Gram unitary theorem is a tool; it does not identify an auxiliary probe’s output Gram matrix with that of the sensor-only marginal amplitudes, handle purification and both objectives, or give either convexity.",
+      "source_url": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/D5/S3/Quantum/Algebra/GramUnitaryExtension.lean",
+      "frozen_declaration_evidence": "https://github.com/the-omega-institute/trureturing/blob/8a24ea4e79de962725aab9d9b49cc605fcc211d8/Golden/Frozen/state/D5/S3/Quantum/Algebra/GramUnitaryExtension.lean.json"
+    },
+    "nonsymmetric-optimum": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "No matching frozen statement found. The Dicke optimum result is in the edge-angle domain, makes no claim about this correlated overlap calculation at theta=pi/2, and does not treat the unambiguous criterion."
+    },
+    "global-projective": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "No matching frozen statement found. The Dicke comparison quantifies global POVMs (not a simultaneous projective restriction for both criteria); the same-Gram unitary theorem does not supply the projective constructions in the 2^n-dimensional sensor space."
+    }
+  }
+}

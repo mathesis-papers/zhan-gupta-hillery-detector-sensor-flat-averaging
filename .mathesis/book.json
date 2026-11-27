@@ -1,0 +1,123 @@
+{
+  "book": "zhan-gupta-hillery-detector-sensor-flat-averaging",
+  "pending_claims": [],
+  "results": {
+    "gram-transfer": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Algebra/GramUnitaryExtension.exists_unitary_mul_eq_of_conjTranspose_mul_eq",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s1",
+      "gids": [],
+      "formalization_request": {
+        "label": "Lemma 1 — Equal Gram matrices preserve all labelled measurement probabilities",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/552"
+      }
+    },
+    "flat-family": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s2",
+      "gids": [],
+      "formalization_request": {
+        "label": "Theorem 2 — Constant discrimination error along complementary-weight mixtures",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/553"
+      }
+    },
+    "equal-overlap": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.global_success_upper_bound",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s3",
+      "gids": [],
+      "formalization_request": {
+        "label": "Lemma 3 — Optimal success for equiprobable equal-overlap pure states",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/554"
+      }
+    },
+    "weak-averaging": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Measurements/DetectorSensorStrictAveragingRefutation.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s4",
+      "gids": [],
+      "formalization_request": {
+        "label": "Theorem 4 — Convexity of detector-sensor minimum error in coefficient squares",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/555"
+      }
+    },
+    "symmetric-optimum": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s5",
+      "gids": [],
+      "formalization_request": {
+        "label": "Corollary 5 — Existence of a layer-symmetric optimum for all sensor angles",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/556"
+      }
+    },
+    "global-value": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/Quantum/Measurement/DetectorSensorDickeOptimality.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s6",
+      "gids": [],
+      "formalization_request": {
+        "label": "Corollary 6 — Exact global detector-sensor minimum error at every angle",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/557"
+      }
+    },
+    "unambiguous-optimum": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/PureState/NoRepetitionSequenceUnambiguousDiscrimination.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s7",
+      "gids": [],
+      "formalization_request": {
+        "label": "Corollary 7 — Unambiguous failure and a common optimal detector-sensor probe",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/558"
+      }
+    },
+    "diagonal-patterns": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Quantum/Algebra/GramUnitaryExtension.exists_unitary_mul_eq_of_conjTranspose_mul_eq",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s8",
+      "gids": [],
+      "formalization_request": {
+        "label": "Corollary 8 — Convexity and auxiliary-system reduction for finite diagonal impact families",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/559"
+      }
+    },
+    "nonsymmetric-optimum": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s9",
+      "gids": [],
+      "formalization_request": {
+        "label": "Corollary 9 — A nonsymmetric three-sensor probe optimal for both criteria",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/560"
+      }
+    },
+    "global-projective": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "claim": "collected:zhan-gupta-hillery-detector-sensor-flat-averaging:3:s10",
+      "gids": [],
+      "formalization_request": {
+        "label": "Corollary 10 — Global projective measurements preserve both detector-sensor optima",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/561"
+      }
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)",
+    "zh": "Flat averages refute Zhan–Gupta–Hillery, Section 5, Conjecture 2 (2024, p. 10:11): an extension of Skotiniotis et al. (2018)"
+  },
+  "version": 3,
+  "work": "zhan-gupta-hillery-detector-sensor-flat-averaging"
+}
